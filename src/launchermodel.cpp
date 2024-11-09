@@ -226,7 +226,7 @@ void LauncherModel::refresh(LauncherModel *manager)
 
     QStringList allEntries;
 
-    QSettings settings(QSettings::UserScope, "lingmoos", "launcher");
+    QSettings settings("lingmoos", "launcher");
     QStringList directories = settings.value("appDirectories").toStringList();
 
     if (directories.isEmpty()) {
