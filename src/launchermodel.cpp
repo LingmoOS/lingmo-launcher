@@ -226,11 +226,11 @@ void LauncherModel::refresh(LauncherModel *manager)
 
     QStringList allEntries;
 
-    QSettings settings("lingmoos", "launcher");
+    QSettings settings(QSettings::UserScope, "lingmoos", "launcher");
     QStringList directories = settings.value("appDirectories").toStringList();
 
     if (directories.isEmpty()) {
-        directories = {
+        directories = QStringList{
             "/usr/share/applications",
             "/var/lib/flatpak/exports/share/applications"
         };
