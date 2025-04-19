@@ -21,11 +21,11 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import QtGraphicalEffects 1.0
+import LingmoUI.GraphicalEffects
 
 import Lingmo.Launcher 1.0
 import Lingmo.System 1.0 as System
-import LingmoUI 1.0 as LingmoUI
+import LingmoUI.CompatibleModule as LingmoUI
 
 Item {
     id: root
