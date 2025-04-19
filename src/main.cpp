@@ -23,6 +23,7 @@
 #include <QPixmapCache>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
+#include <QFile>
 
 #include "launcher.h"
 #include "launchermodel.h"

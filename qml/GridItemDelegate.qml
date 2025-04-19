@@ -19,10 +19,10 @@
 
 import QtQuick 2.12
 import QtQuick.Controls 2.12
-import QtGraphicalEffects 1.0
+import LingmoUI.GraphicalEffects
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
-import LingmoUI 1.0 as LingmoUI
+import LingmoUI.CompatibleModule as LingmoUI
 import Lingmo.Launcher 1.0
 
 Item {
