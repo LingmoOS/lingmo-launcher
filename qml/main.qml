@@ -242,7 +242,7 @@ Item {
                 // placeholderText: qsTr("Search")
                 wrapMode: Text.NoWrap
 
-                color: "white"
+                color: LingmoUI.Theme.overlayTextColor
 
                 Item {
                     id: placeHolderItem
@@ -272,18 +272,42 @@ Item {
 
                         Label {
                             id: _placeLabel
-                            color: "white"
+                            color: LingmoUI.Theme.overlayTextColor
                             text: qsTr("Search")
                             visible: !textField.length && !textField.preeditText && (!textField.activeFocus || textField.horizontalAlignment !== Qt.AlignHCenter)
                         }
                     }
                 }
 
+                // "Vidro Lingmo" over the launcher's own blurred wallpaper: a light
+                // pane whose strength follows Settings > Appearance > Glass (Theme
+                // glass tokens), with a hairline and the 1 px light along the top.
+                // Always light, like the text on it. Not a GlassSurface: that one
+                // turns opaque when KWin doesn't blur behind it, and here the
+                // backdrop is the launcher's own blurred wallpaper.
                 background: Rectangle {
-                    opacity: 0.2
+                    id: _searchGlass
+                    readonly property int level: LingmoUI.Theme.glassEffectiveLevel
                     radius: textField.height * 0.2
-                    color: "white"
-                    border.width: 0
+                    color: Qt.rgba(1, 1, 1, [0.20, 0.14, 0.18, 0.24][level])
+                    border.width: level > 0 ? 1 : 0
+                    border.color: LingmoUI.Theme.overlayBorderColor
+
+                    Behavior on color { ColorAnimation { duration: LingmoUI.Units.longDuration } }
+
+                    // Inner highlight along the top edge
+                    Rectangle {
+                        visible: _searchGlass.level > 0
+                        x: parent.radius
+                        y: 1
+                        width: parent.width - parent.radius * 2
+                        height: 1
+                        gradient: Gradient {
+                            orientation: Gradient.Horizontal
+                            GradientStop { position: 0.0; color: Qt.rgba(1, 1, 1, [0, 0.30, 0.40, 0.55][_searchGlass.level]) }
+                            GradientStop { position: 1.0; color: Qt.rgba(1, 1, 1, 0.05) }
+                        }
+                    }
                 }
 
                 Timer {
