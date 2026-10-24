@@ -109,7 +109,12 @@ void Launcher::showWindow()
     m_showed = true;
     emit showedChanged();
 
+    // KWin places a window again each time it's mapped: pin it to the primary screen
+    const QRect primary = qApp->primaryScreen()->geometry();
+    setScreen(qApp->primaryScreen());
+    setGeometry(primary);
     setVisible(true);
+    setGeometry(primary);
 }
 
 void Launcher::hideWindow()

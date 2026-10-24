@@ -4,74 +4,63 @@
 <context>
     <name>GridItemDelegate</name>
     <message>
-        <location filename="../qml/GridItemDelegate.qml" line="116"/>
+        <location filename="../qml/GridItemDelegate.qml" line="+116"/>
         <source>Open</source>
-        <translation type="unfinished">Abrir</translation>
+        <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="../qml/GridItemDelegate.qml" line="122"/>
+        <location line="+6"/>
         <source>Send to dock</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar para a dock</translation>
     </message>
     <message>
-        <location filename="../qml/GridItemDelegate.qml" line="128"/>
+        <location line="+6"/>
         <source>Send to desktop</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar para a área de trabalho</translation>
     </message>
     <message>
-        <location filename="../qml/GridItemDelegate.qml" line="134"/>
+        <location line="+6"/>
         <source>Remove from dock</source>
-        <translation type="unfinished"></translation>
+        <translation>Remover da dock</translation>
     </message>
     <message>
-        <location filename="../qml/GridItemDelegate.qml" line="140"/>
+        <location line="+6"/>
         <source>Uninstall</source>
-        <translation type="unfinished">Desinstalar</translation>
+        <translation>Desinstalar</translation>
     </message>
 </context>
 <context>
     <name>Launcher</name>
     <message>
-        <location filename="../src/launcher.cpp" line="57"/>
+        <location filename="../src/launcher.cpp" line="+57"/>
         <source>Launcher</source>
-        <translation>Inicializador</translation>
-    </message>
-</context>
-<context>
-    <name>LauncherGridDelegate</name>
-    <message>
-        <source>Open</source>
-        <translation type="vanished">Abrir</translation>
-    </message>
-    <message>
-        <source>Uninstall</source>
-        <translation type="vanished">Desinstalar</translation>
+        <translation>Lançador</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
-        <location filename="../qml/main.qml" line="69"/>
+        <location filename="../qml/main.qml" line="+69"/>
         <source>Are you sure you want to uninstall %1 ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tem certeza de que deseja desinstalar %1?</translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="77"/>
+        <location line="+8"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="84"/>
+        <location line="+7"/>
         <source>Uninstall</source>
-        <translation type="unfinished">Desinstalar</translation>
+        <translation>Desinstalar</translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="276"/>
+        <location line="+192"/>
         <source>Search</source>
         <translation>Pesquisar</translation>
     </message>
     <message>
-        <location filename="../qml/main.qml" line="351"/>
+        <location line="+75"/>
         <source>Not found</source>
         <translation>Não encontrado</translation>
     </message>
